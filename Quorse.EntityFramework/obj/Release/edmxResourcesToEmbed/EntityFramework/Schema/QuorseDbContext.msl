@@ -1,0 +1,1740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuorseDbModelStoreContainer" CdmEntityContainer="QuorseDbEntities">
+    <EntitySetMapping Name="authorisedProviders">
+      <EntityTypeMapping TypeName="QuorseDbModel.authorisedProvider">
+        <MappingFragment StoreEntitySet="authorisedProvider">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="backendlogs">
+      <EntityTypeMapping TypeName="QuorseDbModel.backendlog">
+        <MappingFragment StoreEntitySet="backendlog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="itemid" ColumnName="itemid" />
+          <ScalarProperty Name="logtype" ColumnName="logtype" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="batchappStatus">
+      <EntityTypeMapping TypeName="QuorseDbModel.batchappStatu">
+        <MappingFragment StoreEntitySet="batchappStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="lastrun" ColumnName="lastrun" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="billings">
+      <EntityTypeMapping TypeName="QuorseDbModel.billing">
+        <MappingFragment StoreEntitySet="billing">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="prefmethod" ColumnName="prefmethod" />
+          <ScalarProperty Name="billmethod" ColumnName="billmethod" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="billemail1" ColumnName="billemail1" />
+          <ScalarProperty Name="billemail2" ColumnName="billemail2" />
+          <ScalarProperty Name="picmain" ColumnName="picmain" />
+          <ScalarProperty Name="picsec" ColumnName="picsec" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bookingtyperefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.bookingtyperef">
+        <MappingFragment StoreEntitySet="bookingtyperef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="campaigns">
+      <EntityTypeMapping TypeName="QuorseDbModel.campaign">
+        <MappingFragment StoreEntitySet="campaign">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="createdby" ColumnName="createdby" />
+          <ScalarProperty Name="tagline" ColumnName="tagline" />
+          <ScalarProperty Name="thumbnail" ColumnName="thumbnail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classcampaigns">
+      <EntityTypeMapping TypeName="QuorseDbModel.classcampaign">
+        <MappingFragment StoreEntitySet="classcampaign">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="campaignid" ColumnName="campaignid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="order" ColumnName="order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classDates">
+      <EntityTypeMapping TypeName="QuorseDbModel.classDate">
+        <MappingFragment StoreEntitySet="classDate">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="starttime" ColumnName="starttime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="roomid" ColumnName="roomid" />
+          <ScalarProperty Name="venueid" ColumnName="venueid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classDetails">
+      <EntityTypeMapping TypeName="QuorseDbModel.classDetail">
+        <MappingFragment StoreEntitySet="classDetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="promoprice" ColumnName="promoprice" />
+          <ScalarProperty Name="seats" ColumnName="seats" />
+          <ScalarProperty Name="classpromoitems" ColumnName="classpromoitems" />
+          <ScalarProperty Name="isGrant" ColumnName="isGrant" />
+          <ScalarProperty Name="GrantScheme" ColumnName="GrantScheme" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="HRDFScheme" ColumnName="HRDFScheme" />
+          <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+          <ScalarProperty Name="isshowninsearch" ColumnName="isshowninsearch" />
+          <ScalarProperty Name="guaranteed" ColumnName="guaranteed" />
+          <ScalarProperty Name="examfees" ColumnName="examfees" />
+          <ScalarProperty Name="istimeticker" ColumnName="istimeticker" />
+          <ScalarProperty Name="ttstartdate" ColumnName="ttstartdate" />
+          <ScalarProperty Name="ttenddate" ColumnName="ttenddate" />
+          <ScalarProperty Name="ttprice" ColumnName="ttprice" />
+          <ScalarProperty Name="ttvenueid" ColumnName="ttvenueid" />
+          <ScalarProperty Name="seatStatus" ColumnName="seatStatus" />
+          <ScalarProperty Name="ttvenueaddress" ColumnName="ttvenueaddress" />
+          <ScalarProperty Name="isexamfee" ColumnName="isexamfee" />
+          <ScalarProperty Name="rewardsType" ColumnName="rewardsType" />
+          <ScalarProperty Name="customerAlloc" ColumnName="customerAlloc" />
+          <ScalarProperty Name="trainerAlloc" ColumnName="trainerAlloc" />
+          <ScalarProperty Name="quorseAlloc" ColumnName="quorseAlloc" />
+          <ScalarProperty Name="isClassCompleted" ColumnName="isClassCompleted" />
+          <ScalarProperty Name="isSurveySent" ColumnName="isSurveySent" />
+          <ScalarProperty Name="completeDate" ColumnName="completeDate" />
+          <ScalarProperty Name="normalPriceGift" ColumnName="normalPriceGift" />
+          <ScalarProperty Name="promoPriceGift" ColumnName="promoPriceGift" />
+          <ScalarProperty Name="ttPriceGift" ColumnName="ttPriceGift" />
+          <ScalarProperty Name="islunch" ColumnName="islunch" />
+          <ScalarProperty Name="iscertificate" ColumnName="iscertificate" />
+          <ScalarProperty Name="issbl" ColumnName="issbl" />
+          <ScalarProperty Name="isexam" ColumnName="isexam" />
+          <ScalarProperty Name="isbundle" ColumnName="isbundle" />
+          <ScalarProperty Name="istwelvemonths" ColumnName="istwelvemonths" />
+          <ScalarProperty Name="isthirtydays" ColumnName="isthirtydays" />
+          <ScalarProperty Name="isoneeightzerodays" ColumnName="isoneeightzerodays" />
+          <ScalarProperty Name="isusd" ColumnName="isusd" />
+          <ScalarProperty Name="ninetydayaccess" ColumnName="ninetydayaccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classDetails_history">
+      <EntityTypeMapping TypeName="QuorseDbModel.classDetails_history">
+        <MappingFragment StoreEntitySet="classDetails_history">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="promoprice" ColumnName="promoprice" />
+          <ScalarProperty Name="seats" ColumnName="seats" />
+          <ScalarProperty Name="classpromoitems" ColumnName="classpromoitems" />
+          <ScalarProperty Name="isGrant" ColumnName="isGrant" />
+          <ScalarProperty Name="GrantScheme" ColumnName="GrantScheme" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="HRDFScheme" ColumnName="HRDFScheme" />
+          <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+          <ScalarProperty Name="isshowninsearch" ColumnName="isshowninsearch" />
+          <ScalarProperty Name="guaranteed" ColumnName="guaranteed" />
+          <ScalarProperty Name="examfees" ColumnName="examfees" />
+          <ScalarProperty Name="istimeticker" ColumnName="istimeticker" />
+          <ScalarProperty Name="ttstartdate" ColumnName="ttstartdate" />
+          <ScalarProperty Name="ttenddate" ColumnName="ttenddate" />
+          <ScalarProperty Name="ttprice" ColumnName="ttprice" />
+          <ScalarProperty Name="ttvenueid" ColumnName="ttvenueid" />
+          <ScalarProperty Name="seatStatus" ColumnName="seatStatus" />
+          <ScalarProperty Name="ttvenueaddress" ColumnName="ttvenueaddress" />
+          <ScalarProperty Name="isexamfee" ColumnName="isexamfee" />
+          <ScalarProperty Name="rewardsType" ColumnName="rewardsType" />
+          <ScalarProperty Name="customerAlloc" ColumnName="customerAlloc" />
+          <ScalarProperty Name="trainerAlloc" ColumnName="trainerAlloc" />
+          <ScalarProperty Name="quorseAlloc" ColumnName="quorseAlloc" />
+          <ScalarProperty Name="isClassCompleted" ColumnName="isClassCompleted" />
+          <ScalarProperty Name="isSurveySent" ColumnName="isSurveySent" />
+          <ScalarProperty Name="completeDate" ColumnName="completeDate" />
+          <ScalarProperty Name="normalPriceGift" ColumnName="normalPriceGift" />
+          <ScalarProperty Name="promoPriceGift" ColumnName="promoPriceGift" />
+          <ScalarProperty Name="ttPriceGift" ColumnName="ttPriceGift" />
+          <ScalarProperty Name="islunch" ColumnName="islunch" />
+          <ScalarProperty Name="iscertificate" ColumnName="iscertificate" />
+          <ScalarProperty Name="issbl" ColumnName="issbl" />
+          <ScalarProperty Name="isexam" ColumnName="isexam" />
+          <ScalarProperty Name="isbundle" ColumnName="isbundle" />
+          <ScalarProperty Name="istwelvemonths" ColumnName="istwelvemonths" />
+          <ScalarProperty Name="isthirtydays" ColumnName="isthirtydays" />
+          <ScalarProperty Name="isoneeightzerodays" ColumnName="isoneeightzerodays" />
+          <ScalarProperty Name="isusd" ColumnName="isusd" />
+          <ScalarProperty Name="ninetydayaccess" ColumnName="ninetydayaccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classParticipants">
+      <EntityTypeMapping TypeName="QuorseDbModel.classParticipant">
+        <MappingFragment StoreEntitySet="classParticipant">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="surveyKey" ColumnName="surveyKey" />
+          <ScalarProperty Name="isSurveyDone" ColumnName="isSurveyDone" />
+          <ScalarProperty Name="surveyTime" ColumnName="surveyTime" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classPromoCodes">
+      <EntityTypeMapping TypeName="QuorseDbModel.classPromoCode">
+        <MappingFragment StoreEntitySet="classPromoCode">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="promoCode" ColumnName="promoCode" />
+          <ScalarProperty Name="promoCut" ColumnName="promoCut" />
+          <ScalarProperty Name="promoType" ColumnName="promoType" />
+          <ScalarProperty Name="classId" ColumnName="classId" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="endDate" ColumnName="endDate" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="usageLimit" ColumnName="usageLimit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classRebates">
+      <EntityTypeMapping TypeName="QuorseDbModel.classRebate">
+        <MappingFragment StoreEntitySet="classRebate">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="valueFrom" ColumnName="valueFrom" />
+          <ScalarProperty Name="valueTo" ColumnName="valueTo" />
+          <ScalarProperty Name="rebate" ColumnName="rebate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.classRef">
+        <MappingFragment StoreEntitySet="classRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classRevshares">
+      <EntityTypeMapping TypeName="QuorseDbModel.classRevshare">
+        <MappingFragment StoreEntitySet="classRevshare">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="valueFrom" ColumnName="valueFrom" />
+          <ScalarProperty Name="valueTo" ColumnName="valueTo" />
+          <ScalarProperty Name="share" ColumnName="share" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classRewardsAllocations">
+      <EntityTypeMapping TypeName="QuorseDbModel.classRewardsAllocation">
+        <MappingFragment StoreEntitySet="classRewardsAllocation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="rewardsPoint" ColumnName="rewardsPoint" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="totalpaidprice" ColumnName="totalpaidprice" />
+          <ScalarProperty Name="rewardsfromprice" ColumnName="rewardsfromprice" />
+          <ScalarProperty Name="totalrewards" ColumnName="totalrewards" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classTrainers">
+      <EntityTypeMapping TypeName="QuorseDbModel.classTrainer">
+        <MappingFragment StoreEntitySet="classTrainers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ismain" ColumnName="ismain" />
+          <ScalarProperty Name="coursetrainerid" ColumnName="coursetrainerid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classVenues">
+      <EntityTypeMapping TypeName="QuorseDbModel.classVenue">
+        <MappingFragment StoreEntitySet="classVenue">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="costs">
+      <EntityTypeMapping TypeName="QuorseDbModel.cost">
+        <MappingFragment StoreEntitySet="cost">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="costItemid" ColumnName="costItemid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="unitprice" ColumnName="unitprice" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="isgst" ColumnName="isgst" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="costItems">
+      <EntityTypeMapping TypeName="QuorseDbModel.costItem">
+        <MappingFragment StoreEntitySet="costItems">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="isgst" ColumnName="isgst" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="costRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.costRef">
+        <MappingFragment StoreEntitySet="costRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="costTypes">
+      <EntityTypeMapping TypeName="QuorseDbModel.costType">
+        <MappingFragment StoreEntitySet="costType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="QuorseDbModel.course">
+        <MappingFragment StoreEntitySet="course">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="userdashid" ColumnName="userdashid" />
+          <ScalarProperty Name="courseLevel1" ColumnName="courseLevel1" />
+          <ScalarProperty Name="courseLevel2" ColumnName="courseLevel2" />
+          <ScalarProperty Name="courseLevel3" ColumnName="courseLevel3" />
+          <ScalarProperty Name="courseLevel4" ColumnName="courseLevel4" />
+          <ScalarProperty Name="courseLevel5" ColumnName="courseLevel5" />
+          <ScalarProperty Name="courseLevel6" ColumnName="courseLevel6" />
+          <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+          <ScalarProperty Name="expirationDate" ColumnName="expirationDate" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="HRDFClaim" ColumnName="HRDFClaim" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="colorHex" ColumnName="colorHex" />
+          <ScalarProperty Name="courseprice" ColumnName="courseprice" />
+          <ScalarProperty Name="showprice" ColumnName="showprice" />
+          <ScalarProperty Name="teaser" ColumnName="teaser" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="modules" ColumnName="modules" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="bgLarge" ColumnName="bgLarge" />
+          <ScalarProperty Name="tags" ColumnName="tags" />
+          <ScalarProperty Name="CourseStatus" ColumnName="CourseStatus" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="entityguid" ColumnName="entityguid" />
+          <ScalarProperty Name="rewardspoints" ColumnName="rewardspoints" />
+          <ScalarProperty Name="whatyoullget" ColumnName="whatyoullget" />
+          <ScalarProperty Name="outlineFileName" ColumnName="outlineFileName" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="overallscore" ColumnName="overallscore" />
+          <ScalarProperty Name="courserating" ColumnName="courserating" />
+          <ScalarProperty Name="ratingtotal" ColumnName="ratingtotal" />
+          <ScalarProperty Name="downloads" ColumnName="downloads" />
+          <ScalarProperty Name="recommendedAudience" ColumnName="recommendedAudience" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="isusd" ColumnName="isusd" />
+          <ScalarProperty Name="lvcduration" ColumnName="lvcduration" />
+          <ScalarProperty Name="elearningduration" ColumnName="elearningduration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course_old">
+      <EntityTypeMapping TypeName="QuorseDbModel.course_old">
+        <MappingFragment StoreEntitySet="course_old">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="userdashid" ColumnName="userdashid" />
+          <ScalarProperty Name="courseType" ColumnName="courseType" />
+          <ScalarProperty Name="coursePrincipal" ColumnName="coursePrincipal" />
+          <ScalarProperty Name="courseCategory" ColumnName="courseCategory" />
+          <ScalarProperty Name="courseProduct" ColumnName="courseProduct" />
+          <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+          <ScalarProperty Name="expirationDate" ColumnName="expirationDate" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="HRDFClaim" ColumnName="HRDFClaim" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="colorHex" ColumnName="colorHex" />
+          <ScalarProperty Name="courseprice" ColumnName="courseprice" />
+          <ScalarProperty Name="showprice" ColumnName="showprice" />
+          <ScalarProperty Name="teaser" ColumnName="teaser" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="modules" ColumnName="modules" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="bgLarge" ColumnName="bgLarge" />
+          <ScalarProperty Name="tags" ColumnName="tags" />
+          <ScalarProperty Name="CourseStatus" ColumnName="CourseStatus" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="entityguid" ColumnName="entityguid" />
+          <ScalarProperty Name="rewardspoints" ColumnName="rewardspoints" />
+          <ScalarProperty Name="whatyoullget" ColumnName="whatyoullget" />
+          <ScalarProperty Name="outlineFileName" ColumnName="outlineFileName" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="overallscore" ColumnName="overallscore" />
+          <ScalarProperty Name="courserating" ColumnName="courserating" />
+          <ScalarProperty Name="ratingtotal" ColumnName="ratingtotal" />
+          <ScalarProperty Name="downloads" ColumnName="downloads" />
+          <ScalarProperty Name="recommendedAudience" ColumnName="recommendedAudience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseAdditionalInfoes">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseAdditionalInfo">
+        <MappingFragment StoreEntitySet="courseAdditionalInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseId" ColumnName="courseId" />
+          <ScalarProperty Name="infoId" ColumnName="infoId" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseanalytics">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseanalytic">
+        <MappingFragment StoreEntitySet="courseanalytics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="usersource" ColumnName="usersource" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseCategories">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseCategory">
+        <MappingFragment StoreEntitySet="courseCategory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="typeid" ColumnName="typeid" />
+          <ScalarProperty Name="principalid" ColumnName="principalid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseFeatureds">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseFeatured">
+        <MappingFragment StoreEntitySet="courseFeatured">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseFeaturedHistories">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseFeaturedHistory">
+        <MappingFragment StoreEntitySet="courseFeaturedHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="coursefeaturedid" ColumnName="coursefeaturedid" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="dateadded" ColumnName="dateadded" />
+          <ScalarProperty Name="dateremoved" ColumnName="dateremoved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseFeaturedPositions">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseFeaturedPosition">
+        <MappingFragment StoreEntitySet="courseFeaturedPosition">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="coursefeaturedid" ColumnName="coursefeaturedid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseInfoes">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseInfo">
+        <MappingFragment StoreEntitySet="courseInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseInfoTypeRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseInfoTypeRef">
+        <MappingFragment StoreEntitySet="courseInfoTypeRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseLevel1">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseLevel1">
+        <MappingFragment StoreEntitySet="courseLevel1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="searchname" ColumnName="searchname" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="footerDescription" ColumnName="footerDescription" />
+          <ScalarProperty Name="footerTitle" ColumnName="footerTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseLevel2">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseLevel2">
+        <MappingFragment StoreEntitySet="courseLevel2">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="level1Id" ColumnName="level1Id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="searchname" ColumnName="searchname" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="footerDescription" ColumnName="footerDescription" />
+          <ScalarProperty Name="footerTitle" ColumnName="footerTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseLevel3">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseLevel3">
+        <MappingFragment StoreEntitySet="courseLevel3">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="level2Id" ColumnName="level2Id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="searchname" ColumnName="searchname" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="footerDescription" ColumnName="footerDescription" />
+          <ScalarProperty Name="footerTitle" ColumnName="footerTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseLevel4">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseLevel4">
+        <MappingFragment StoreEntitySet="courseLevel4">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="level3Id" ColumnName="level3Id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="searchname" ColumnName="searchname" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="footerDescription" ColumnName="footerDescription" />
+          <ScalarProperty Name="footerTitle" ColumnName="footerTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseLevel5">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseLevel5">
+        <MappingFragment StoreEntitySet="courseLevel5">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="level4Id" ColumnName="level4Id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="footerDescription" ColumnName="footerDescription" />
+          <ScalarProperty Name="footerTitle" ColumnName="footerTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseLevel6">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseLevel6">
+        <MappingFragment StoreEntitySet="courseLevel6">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="level5Id" ColumnName="level5Id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="footerDescription" ColumnName="footerDescription" />
+          <ScalarProperty Name="footerTitle" ColumnName="footerTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coursePrincipals">
+      <EntityTypeMapping TypeName="QuorseDbModel.coursePrincipal">
+        <MappingFragment StoreEntitySet="coursePrincipal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="typeid" ColumnName="typeid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseProducts">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseProduct">
+        <MappingFragment StoreEntitySet="courseProduct">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="typeid" ColumnName="typeid" />
+          <ScalarProperty Name="principalid" ColumnName="principalid" />
+          <ScalarProperty Name="categoryid" ColumnName="categoryid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseStatusRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseStatusRef">
+        <MappingFragment StoreEntitySet="courseStatusRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseTags">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseTag">
+        <MappingFragment StoreEntitySet="courseTags">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="usage" ColumnName="usage" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseTrainers">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseTrainer">
+        <MappingFragment StoreEntitySet="courseTrainers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ismain" ColumnName="ismain" />
+          <ScalarProperty Name="isSBLKhas" ColumnName="isSBLKhas" />
+          <ScalarProperty Name="userlinkid" ColumnName="userlinkid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="courseTypes">
+      <EntityTypeMapping TypeName="QuorseDbModel.courseType">
+        <MappingFragment StoreEntitySet="courseType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="currencies">
+      <EntityTypeMapping TypeName="QuorseDbModel.currency">
+        <MappingFragment StoreEntitySet="currency">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyRate" ColumnName="CurrencyRate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DashboardEnquiries">
+      <EntityTypeMapping TypeName="QuorseDbModel.DashboardEnquiry">
+        <MappingFragment StoreEntitySet="DashboardEnquiry">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EntityID" ColumnName="EntityID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="EnquiryDate" ColumnName="EnquiryDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DashID" ColumnName="DashID" />
+          <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="defaultseos">
+      <EntityTypeMapping TypeName="QuorseDbModel.defaultseo">
+        <MappingFragment StoreEntitySet="defaultseo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastModified" ColumnName="lastModified" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="docRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.docRef">
+        <MappingFragment StoreEntitySet="docRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enquiries">
+      <EntityTypeMapping TypeName="QuorseDbModel.enquiry">
+        <MappingFragment StoreEntitySet="enquiry">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enquiryCategoryRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.enquiryCategoryRef">
+        <MappingFragment StoreEntitySet="enquiryCategoryRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enquiryHistories">
+      <EntityTypeMapping TypeName="QuorseDbModel.enquiryHistory">
+        <MappingFragment StoreEntitySet="enquiryHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="enquiryid" ColumnName="enquiryid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="statusfrom" ColumnName="statusfrom" />
+          <ScalarProperty Name="statusto" ColumnName="statusto" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="dashidFrom" ColumnName="dashidFrom" />
+          <ScalarProperty Name="dashidTo" ColumnName="dashidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enquiryStatusRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.enquiryStatusRef">
+        <MappingFragment StoreEntitySet="enquiryStatusRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enrollenquiries">
+      <EntityTypeMapping TypeName="QuorseDbModel.enrollenquiry">
+        <MappingFragment StoreEntitySet="enrollenquiry">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="bookingtype" ColumnName="bookingtype" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="updateddate" ColumnName="updateddate" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="paxno" ColumnName="paxno" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+          <ScalarProperty Name="businessrefno" ColumnName="businessrefno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enrollenquiryHistories">
+      <EntityTypeMapping TypeName="QuorseDbModel.enrollenquiryHistory">
+        <MappingFragment StoreEntitySet="enrollenquiryHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="enrollenquiryid" ColumnName="enrollenquiryid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="statusfrom" ColumnName="statusfrom" />
+          <ScalarProperty Name="statusto" ColumnName="statusto" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="dashidFrom" ColumnName="dashidFrom" />
+          <ScalarProperty Name="dashidTo" ColumnName="dashidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entities">
+      <EntityTypeMapping TypeName="QuorseDbModel.entity">
+        <MappingFragment StoreEntitySet="entity">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="regno" ColumnName="regno" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="foundingyear" ColumnName="foundingyear" />
+          <ScalarProperty Name="noemployees" ColumnName="noemployees" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="email2" ColumnName="email2" />
+          <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+          <ScalarProperty Name="officephone" ColumnName="officephone" />
+          <ScalarProperty Name="officephone2" ColumnName="officephone2" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="addressline1" ColumnName="addressline1" />
+          <ScalarProperty Name="addressline2" ColumnName="addressline2" />
+          <ScalarProperty Name="addresscity1" ColumnName="addresscity1" />
+          <ScalarProperty Name="addressstate1" ColumnName="addressstate1" />
+          <ScalarProperty Name="addresspostcode1" ColumnName="addresspostcode1" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="permission" ColumnName="permission" />
+          <ScalarProperty Name="levelsapproval" ColumnName="levelsapproval" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="iscreditterm" ColumnName="iscreditterm" />
+          <ScalarProperty Name="creditterm" ColumnName="creditterm" />
+          <ScalarProperty Name="parententity" ColumnName="parententity" />
+          <ScalarProperty Name="providerprincipal" ColumnName="providerprincipal" />
+          <ScalarProperty Name="providercourses" ColumnName="providercourses" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="ax1" ColumnName="ax1" />
+          <ScalarProperty Name="ax2" ColumnName="ax2" />
+          <ScalarProperty Name="ay1" ColumnName="ay1" />
+          <ScalarProperty Name="ay2" ColumnName="ay2" />
+          <ScalarProperty Name="profilebanner" ColumnName="profilebanner" />
+          <ScalarProperty Name="pfx1" ColumnName="pfx1" />
+          <ScalarProperty Name="pfx2" ColumnName="pfx2" />
+          <ScalarProperty Name="pfy1" ColumnName="pfy1" />
+          <ScalarProperty Name="pfy2" ColumnName="pfy2" />
+          <ScalarProperty Name="presentationfile" ColumnName="presentationfile" />
+          <ScalarProperty Name="tmsid" ColumnName="tmsid" />
+          <ScalarProperty Name="rewardsPoint" ColumnName="rewardsPoint" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ShippingAddress1" ColumnName="ShippingAddress1" />
+          <ScalarProperty Name="ShippingAddress2" ColumnName="ShippingAddress2" />
+          <ScalarProperty Name="ShippingCity" ColumnName="ShippingCity" />
+          <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+          <ScalarProperty Name="ShippingPostCode" ColumnName="ShippingPostCode" />
+          <ScalarProperty Name="ShippingCountry" ColumnName="ShippingCountry" />
+          <ScalarProperty Name="BillingAddress1" ColumnName="BillingAddress1" />
+          <ScalarProperty Name="BillingAddress2" ColumnName="BillingAddress2" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingPostCode" ColumnName="BillingPostCode" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="creditTermLimit" ColumnName="creditTermLimit" />
+          <ScalarProperty Name="awards" ColumnName="awards" />
+          <ScalarProperty Name="clienteles" ColumnName="clienteles" />
+          <ScalarProperty Name="testimonials" ColumnName="testimonials" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="visionAndMission" ColumnName="visionAndMission" />
+          <ScalarProperty Name="CreditTermBalance" ColumnName="CreditTermBalance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entityTypeRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.entityTypeRef">
+        <MappingFragment StoreEntitySet="entityTypeRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exams">
+      <EntityTypeMapping TypeName="QuorseDbModel.exam">
+        <MappingFragment StoreEntitySet="exam">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="noquestion" ColumnName="noquestion" />
+          <ScalarProperty Name="exammode" ColumnName="exammode" />
+          <ScalarProperty Name="questionformat" ColumnName="questionformat" />
+          <ScalarProperty Name="passingscoremin" ColumnName="passingscoremin" />
+          <ScalarProperty Name="passingscoremax" ColumnName="passingscoremax" />
+          <ScalarProperty Name="testingcenter" ColumnName="testingcenter" />
+          <ScalarProperty Name="retakefee" ColumnName="retakefee" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="isusd" ColumnName="isusd" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grantPrograms">
+      <EntityTypeMapping TypeName="QuorseDbModel.grantProgram">
+        <MappingFragment StoreEntitySet="grantProgram">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hrdfClaims">
+      <EntityTypeMapping TypeName="QuorseDbModel.hrdfClaim">
+        <MappingFragment StoreEntitySet="hrdfClaim">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="QuorseDbModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="ProductOrderId" ColumnName="ProductOrderId" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logtypeRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.logtypeRef">
+        <MappingFragment StoreEntitySet="logtypeRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="QuorseDbModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductOrderId" ColumnName="ProductOrderId" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="DiscountPrice" ColumnName="DiscountPrice" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paymentRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.paymentRef">
+        <MappingFragment StoreEntitySet="paymentRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTransactions">
+      <EntityTypeMapping TypeName="QuorseDbModel.PaymentTransaction">
+        <MappingFragment StoreEntitySet="PaymentTransaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderReferenceNo" ColumnName="OrderReferenceNo" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+          <ScalarProperty Name="AuthenticationCode" ColumnName="AuthenticationCode" />
+          <ScalarProperty Name="PaymentGateway" ColumnName="PaymentGateway" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="AdditionalInformation" ColumnName="AdditionalInformation" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="TransactionFee" ColumnName="TransactionFee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pointsRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.pointsRef">
+        <MappingFragment StoreEntitySet="pointsRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isapproved" ColumnName="isapproved" />
+          <ScalarProperty Name="datemodified" ColumnName="datemodified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="privatebooks">
+      <EntityTypeMapping TypeName="QuorseDbModel.privatebook">
+        <MappingFragment StoreEntitySet="privatebook">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="noofpax" ColumnName="noofpax" />
+          <ScalarProperty Name="preferredvenue" ColumnName="preferredvenue" />
+          <ScalarProperty Name="preferreddate1" ColumnName="preferreddate1" />
+          <ScalarProperty Name="preferreddate2" ColumnName="preferreddate2" />
+          <ScalarProperty Name="preferreddate3" ColumnName="preferreddate3" />
+          <ScalarProperty Name="preferredtrainer1" ColumnName="preferredtrainer1" />
+          <ScalarProperty Name="preferredtrainer2" ColumnName="preferredtrainer2" />
+          <ScalarProperty Name="preferredtrainer3" ColumnName="preferredtrainer3" />
+          <ScalarProperty Name="scheme" ColumnName="scheme" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="istimeticker" ColumnName="istimeticker" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="createddate" ColumnName="createddate" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="businessRefNo" ColumnName="businessRefNo" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="privateBookHistories">
+      <EntityTypeMapping TypeName="QuorseDbModel.privateBookHistory">
+        <MappingFragment StoreEntitySet="privateBookHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="privatebookid" ColumnName="privatebookid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="statusfrom" ColumnName="statusfrom" />
+          <ScalarProperty Name="statusto" ColumnName="statusto" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="dashidFrom" ColumnName="dashidFrom" />
+          <ScalarProperty Name="dashidTo" ColumnName="dashidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductOrders">
+      <EntityTypeMapping TypeName="QuorseDbModel.ProductOrder">
+        <MappingFragment StoreEntitySet="ProductOrder">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CheckoutDate" ColumnName="CheckoutDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ContactName1" ColumnName="ContactName1" />
+          <ScalarProperty Name="ContactPhone1" ColumnName="ContactPhone1" />
+          <ScalarProperty Name="ContactEmail1" ColumnName="ContactEmail1" />
+          <ScalarProperty Name="ContactBillingAddress1" ColumnName="ContactBillingAddress1" />
+          <ScalarProperty Name="ContactName2" ColumnName="ContactName2" />
+          <ScalarProperty Name="ContactPhone2" ColumnName="ContactPhone2" />
+          <ScalarProperty Name="ContactEmail2" ColumnName="ContactEmail2" />
+          <ScalarProperty Name="PriceWithGst" ColumnName="PriceWithGst" />
+          <ScalarProperty Name="ContactCompany1" ColumnName="ContactCompany1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quotations">
+      <EntityTypeMapping TypeName="QuorseDbModel.quotation">
+        <MappingFragment StoreEntitySet="quotation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="NoOfPax" ColumnName="NoOfPax" />
+          <ScalarProperty Name="Upload" ColumnName="Upload" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="QuotationNo" ColumnName="QuotationNo" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="TicketId" ColumnName="TicketId" />
+          <ScalarProperty Name="isbundle" ColumnName="isbundle" />
+          <ScalarProperty Name="isPurchasedExam" ColumnName="isPurchasedExam" />
+          <ScalarProperty Name="UnitExamPrice" ColumnName="UnitExamPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rewardsTypeRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.rewardsTypeRef">
+        <MappingFragment StoreEntitySet="rewardsTypeRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rooms">
+      <EntityTypeMapping TypeName="QuorseDbModel.room">
+        <MappingFragment StoreEntitySet="room">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="venueid" ColumnName="venueid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="statusRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.statusRef">
+        <MappingFragment StoreEntitySet="statusRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subscriptions">
+      <EntityTypeMapping TypeName="QuorseDbModel.subscription">
+        <MappingFragment StoreEntitySet="subscription">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="subdate" ColumnName="subdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="QuorseDbModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketdetails">
+      <EntityTypeMapping TypeName="QuorseDbModel.ticketdetail">
+        <MappingFragment StoreEntitySet="ticketdetails">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="tickettype" ColumnName="tickettype" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="bookingtype" ColumnName="bookingtype" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+          <ScalarProperty Name="IcNo" ColumnName="IcNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tickets">
+      <EntityTypeMapping TypeName="QuorseDbModel.ticket">
+        <MappingFragment StoreEntitySet="tickets">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="tickettype" ColumnName="tickettype" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="updated" ColumnName="updated" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="paxno" ColumnName="paxno" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+          <ScalarProperty Name="bookingtype" ColumnName="bookingtype" />
+          <ScalarProperty Name="businessRefNo" ColumnName="businessRefNo" />
+          <ScalarProperty Name="isEnrolled" ColumnName="isEnrolled" />
+          <ScalarProperty Name="JoinExam" ColumnName="JoinExam" />
+          <ScalarProperty Name="classPromoCodeId" ColumnName="classPromoCodeId" />
+          <ScalarProperty Name="EnrollType" ColumnName="EnrollType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketsHistories">
+      <EntityTypeMapping TypeName="QuorseDbModel.ticketsHistory">
+        <MappingFragment StoreEntitySet="ticketsHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="statusfrom" ColumnName="statusfrom" />
+          <ScalarProperty Name="statusto" ColumnName="statusto" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="dashidFrom" ColumnName="dashidFrom" />
+          <ScalarProperty Name="dashidTo" ColumnName="dashidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketstatus">
+      <EntityTypeMapping TypeName="QuorseDbModel.ticketstatu">
+        <MappingFragment StoreEntitySet="ticketstatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ticketTypeRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.ticketTypeRef">
+        <MappingFragment StoreEntitySet="ticketTypeRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trainerEvaluations">
+      <EntityTypeMapping TypeName="QuorseDbModel.trainerEvaluation">
+        <MappingFragment StoreEntitySet="trainerEvaluation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="trainerId" ColumnName="trainerId" />
+          <ScalarProperty Name="testimonials" ColumnName="testimonials" />
+          <ScalarProperty Name="evalQuestions" ColumnName="evalQuestions" />
+          <ScalarProperty Name="competency" ColumnName="competency" />
+          <ScalarProperty Name="communication" ColumnName="communication" />
+          <ScalarProperty Name="practical" ColumnName="practical" />
+          <ScalarProperty Name="engaging" ColumnName="engaging" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="datemodified" ColumnName="datemodified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="QuorseDbModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="nric" ColumnName="nric" />
+          <ScalarProperty Name="passport" ColumnName="passport" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="langspoken" ColumnName="langspoken" />
+          <ScalarProperty Name="langwritten" ColumnName="langwritten" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="ax1" ColumnName="ax1" />
+          <ScalarProperty Name="ax2" ColumnName="ax2" />
+          <ScalarProperty Name="ay1" ColumnName="ay1" />
+          <ScalarProperty Name="ay2" ColumnName="ay2" />
+          <ScalarProperty Name="profilebanner" ColumnName="profilebanner" />
+          <ScalarProperty Name="pfx1" ColumnName="pfx1" />
+          <ScalarProperty Name="pfx2" ColumnName="pfx2" />
+          <ScalarProperty Name="pfy1" ColumnName="pfy1" />
+          <ScalarProperty Name="pfy2" ColumnName="pfy2" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="creationlocation" ColumnName="creationlocation" />
+          <ScalarProperty Name="creationip" ColumnName="creationip" />
+          <ScalarProperty Name="activationdate" ColumnName="activationdate" />
+          <ScalarProperty Name="activationkey" ColumnName="activationkey" />
+          <ScalarProperty Name="lastlogintime" ColumnName="lastlogintime" />
+          <ScalarProperty Name="updatetime" ColumnName="updatetime" />
+          <ScalarProperty Name="isSBLKhas" ColumnName="isSBLKhas" />
+          <ScalarProperty Name="isSMETAP" ColumnName="isSMETAP" />
+          <ScalarProperty Name="isverified" ColumnName="isverified" />
+          <ScalarProperty Name="quote" ColumnName="quote" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="isTTT" ColumnName="isTTT" />
+          <ScalarProperty Name="trainerloc" ColumnName="trainerloc" />
+          <ScalarProperty Name="yearsexp" ColumnName="yearsexp" />
+          <ScalarProperty Name="workingexp" ColumnName="workingexp" />
+          <ScalarProperty Name="industries" ColumnName="industries" />
+          <ScalarProperty Name="clienteles" ColumnName="clienteles" />
+          <ScalarProperty Name="certification" ColumnName="certification" />
+          <ScalarProperty Name="awards" ColumnName="awards" />
+          <ScalarProperty Name="skills" ColumnName="skills" />
+          <ScalarProperty Name="qualifications" ColumnName="qualifications" />
+          <ScalarProperty Name="testimonials" ColumnName="testimonials" />
+          <ScalarProperty Name="jokingrate" ColumnName="jokingrate" />
+          <ScalarProperty Name="usernameurl" ColumnName="usernameurl" />
+          <ScalarProperty Name="publication" ColumnName="publication" />
+          <ScalarProperty Name="trainertype" ColumnName="trainertype" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="software" ColumnName="software" />
+          <ScalarProperty Name="userrating" ColumnName="userrating" />
+          <ScalarProperty Name="ratingtotal" ColumnName="ratingtotal" />
+          <ScalarProperty Name="notrained" ColumnName="notrained" />
+          <ScalarProperty Name="noclass" ColumnName="noclass" />
+          <ScalarProperty Name="rewardsPoint" ColumnName="rewardsPoint" />
+          <ScalarProperty Name="ShippingAddress1" ColumnName="ShippingAddress1" />
+          <ScalarProperty Name="ShippingAddress2" ColumnName="ShippingAddress2" />
+          <ScalarProperty Name="ShippingCity" ColumnName="ShippingCity" />
+          <ScalarProperty Name="ShippingState" ColumnName="ShippingState" />
+          <ScalarProperty Name="ShippingPostCode" ColumnName="ShippingPostCode" />
+          <ScalarProperty Name="ShippingCountry" ColumnName="ShippingCountry" />
+          <ScalarProperty Name="BillingAddress1" ColumnName="BillingAddress1" />
+          <ScalarProperty Name="BillingAddress2" ColumnName="BillingAddress2" />
+          <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+          <ScalarProperty Name="BillingState" ColumnName="BillingState" />
+          <ScalarProperty Name="BillingPostCode" ColumnName="BillingPostCode" />
+          <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
+          <ScalarProperty Name="downloads" ColumnName="downloads" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="useranalytics">
+      <EntityTypeMapping TypeName="QuorseDbModel.useranalytic">
+        <MappingFragment StoreEntitySet="useranalytics">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="usersource" ColumnName="usersource" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userCourseEvals">
+      <EntityTypeMapping TypeName="QuorseDbModel.userCourseEval">
+        <MappingFragment StoreEntitySet="userCourseEval">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="remarkstitle" ColumnName="remarkstitle" />
+          <ScalarProperty Name="remarksdesc" ColumnName="remarksdesc" />
+          <ScalarProperty Name="submitdate" ColumnName="submitdate" />
+          <ScalarProperty Name="content_overall" ColumnName="content_overall" />
+          <ScalarProperty Name="content_objectives" ColumnName="content_objectives" />
+          <ScalarProperty Name="content_topics" ColumnName="content_topics" />
+          <ScalarProperty Name="content_organized" ColumnName="content_organized" />
+          <ScalarProperty Name="content_dedicated" ColumnName="content_dedicated" />
+          <ScalarProperty Name="content_summary" ColumnName="content_summary" />
+          <ScalarProperty Name="content_clarity" ColumnName="content_clarity" />
+          <ScalarProperty Name="content_relevance" ColumnName="content_relevance" />
+          <ScalarProperty Name="overallscore" ColumnName="overallscore" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="useremail" ColumnName="useremail" />
+          <ScalarProperty Name="userphone" ColumnName="userphone" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userCourseReqs">
+      <EntityTypeMapping TypeName="QuorseDbModel.userCourseReq">
+        <MappingFragment StoreEntitySet="userCourseReq">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ticketid" ColumnName="ticketid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userDashboards">
+      <EntityTypeMapping TypeName="QuorseDbModel.userDashboard">
+        <MappingFragment StoreEntitySet="userDashboard">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="postitle" ColumnName="postitle" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="creationlocation" ColumnName="creationlocation" />
+          <ScalarProperty Name="datemodified" ColumnName="datemodified" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userDashboardLinks">
+      <EntityTypeMapping TypeName="QuorseDbModel.userDashboardLink">
+        <MappingFragment StoreEntitySet="userDashboardLink">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dashid" ColumnName="dashid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userDashboardRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.userDashboardRef">
+        <MappingFragment StoreEntitySet="userDashboardRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userDocs">
+      <EntityTypeMapping TypeName="QuorseDbModel.userDoc">
+        <MappingFragment StoreEntitySet="userDocs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userFavs">
+      <EntityTypeMapping TypeName="QuorseDbModel.userFav">
+        <MappingFragment StoreEntitySet="userFav">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userlinks">
+      <EntityTypeMapping TypeName="QuorseDbModel.userlink">
+        <MappingFragment StoreEntitySet="userlink">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="usertype" ColumnName="usertype" />
+          <ScalarProperty Name="activationdate" ColumnName="activationdate" />
+          <ScalarProperty Name="activationkey" ColumnName="activationkey" />
+          <ScalarProperty Name="updatetime" ColumnName="updatetime" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.userRef">
+        <MappingFragment StoreEntitySet="userRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userStatusRefs">
+      <EntityTypeMapping TypeName="QuorseDbModel.userStatusRef">
+        <MappingFragment StoreEntitySet="userStatusRef">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userTrainerEvals">
+      <EntityTypeMapping TypeName="QuorseDbModel.userTrainerEval">
+        <MappingFragment StoreEntitySet="userTrainerEval">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="trainerid" ColumnName="trainerid" />
+          <ScalarProperty Name="remarkstitle" ColumnName="remarkstitle" />
+          <ScalarProperty Name="remarksdesc" ColumnName="remarksdesc" />
+          <ScalarProperty Name="submitdate" ColumnName="submitdate" />
+          <ScalarProperty Name="trainer_summary" ColumnName="trainer_summary" />
+          <ScalarProperty Name="trainer_knowledge" ColumnName="trainer_knowledge" />
+          <ScalarProperty Name="trainer_ability" ColumnName="trainer_ability" />
+          <ScalarProperty Name="trainer_competent" ColumnName="trainer_competent" />
+          <ScalarProperty Name="trainer_communicate" ColumnName="trainer_communicate" />
+          <ScalarProperty Name="trainer_practical" ColumnName="trainer_practical" />
+          <ScalarProperty Name="trainer_engaging" ColumnName="trainer_engaging" />
+          <ScalarProperty Name="overallscore" ColumnName="overallscore" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="useremail" ColumnName="useremail" />
+          <ScalarProperty Name="userphone" ColumnName="userphone" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="venues">
+      <EntityTypeMapping TypeName="QuorseDbModel.venue">
+        <MappingFragment StoreEntitySet="venue">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="entityid" ColumnName="entityid" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classDetails_bak">
+      <EntityTypeMapping TypeName="QuorseDbModel.classDetails_bak">
+        <MappingFragment StoreEntitySet="classDetails_bak">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="promoprice" ColumnName="promoprice" />
+          <ScalarProperty Name="seats" ColumnName="seats" />
+          <ScalarProperty Name="classpromoitems" ColumnName="classpromoitems" />
+          <ScalarProperty Name="isGrant" ColumnName="isGrant" />
+          <ScalarProperty Name="GrantScheme" ColumnName="GrantScheme" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="HRDFScheme" ColumnName="HRDFScheme" />
+          <ScalarProperty Name="Scheme" ColumnName="Scheme" />
+          <ScalarProperty Name="isshowninsearch" ColumnName="isshowninsearch" />
+          <ScalarProperty Name="guaranteed" ColumnName="guaranteed" />
+          <ScalarProperty Name="examfees" ColumnName="examfees" />
+          <ScalarProperty Name="istimeticker" ColumnName="istimeticker" />
+          <ScalarProperty Name="ttstartdate" ColumnName="ttstartdate" />
+          <ScalarProperty Name="ttenddate" ColumnName="ttenddate" />
+          <ScalarProperty Name="ttprice" ColumnName="ttprice" />
+          <ScalarProperty Name="ttvenueid" ColumnName="ttvenueid" />
+          <ScalarProperty Name="seatStatus" ColumnName="seatStatus" />
+          <ScalarProperty Name="ttvenueaddress" ColumnName="ttvenueaddress" />
+          <ScalarProperty Name="isexamfee" ColumnName="isexamfee" />
+          <ScalarProperty Name="rewardsType" ColumnName="rewardsType" />
+          <ScalarProperty Name="customerAlloc" ColumnName="customerAlloc" />
+          <ScalarProperty Name="trainerAlloc" ColumnName="trainerAlloc" />
+          <ScalarProperty Name="quorseAlloc" ColumnName="quorseAlloc" />
+          <ScalarProperty Name="isClassCompleted" ColumnName="isClassCompleted" />
+          <ScalarProperty Name="isSurveySent" ColumnName="isSurveySent" />
+          <ScalarProperty Name="completeDate" ColumnName="completeDate" />
+          <ScalarProperty Name="normalPriceGift" ColumnName="normalPriceGift" />
+          <ScalarProperty Name="promoPriceGift" ColumnName="promoPriceGift" />
+          <ScalarProperty Name="ttPriceGift" ColumnName="ttPriceGift" />
+          <ScalarProperty Name="islunch" ColumnName="islunch" />
+          <ScalarProperty Name="iscertificate" ColumnName="iscertificate" />
+          <ScalarProperty Name="issbl" ColumnName="issbl" />
+          <ScalarProperty Name="isexam" ColumnName="isexam" />
+          <ScalarProperty Name="isbundle" ColumnName="isbundle" />
+          <ScalarProperty Name="istwelvemonths" ColumnName="istwelvemonths" />
+          <ScalarProperty Name="isthirtydays" ColumnName="isthirtydays" />
+          <ScalarProperty Name="isoneeightzerodays" ColumnName="isoneeightzerodays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course1">
+      <EntityTypeMapping TypeName="QuorseDbModel.course1">
+        <MappingFragment StoreEntitySet="course1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="creationdate" ColumnName="creationdate" />
+          <ScalarProperty Name="userdashid" ColumnName="userdashid" />
+          <ScalarProperty Name="courseLevel1" ColumnName="courseLevel1" />
+          <ScalarProperty Name="courseLevel2" ColumnName="courseLevel2" />
+          <ScalarProperty Name="courseLevel3" ColumnName="courseLevel3" />
+          <ScalarProperty Name="courseLevel4" ColumnName="courseLevel4" />
+          <ScalarProperty Name="courseLevel5" ColumnName="courseLevel5" />
+          <ScalarProperty Name="courseLevel6" ColumnName="courseLevel6" />
+          <ScalarProperty Name="publishDate" ColumnName="publishDate" />
+          <ScalarProperty Name="expirationDate" ColumnName="expirationDate" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="HRDFClaim" ColumnName="HRDFClaim" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="colorHex" ColumnName="colorHex" />
+          <ScalarProperty Name="courseprice" ColumnName="courseprice" />
+          <ScalarProperty Name="showprice" ColumnName="showprice" />
+          <ScalarProperty Name="teaser" ColumnName="teaser" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="modules" ColumnName="modules" />
+          <ScalarProperty Name="thumbSmall" ColumnName="thumbSmall" />
+          <ScalarProperty Name="thumbMedium" ColumnName="thumbMedium" />
+          <ScalarProperty Name="thumbFeatured" ColumnName="thumbFeatured" />
+          <ScalarProperty Name="bgLarge" ColumnName="bgLarge" />
+          <ScalarProperty Name="tags" ColumnName="tags" />
+          <ScalarProperty Name="CourseStatus" ColumnName="CourseStatus" />
+          <ScalarProperty Name="updatedate" ColumnName="updatedate" />
+          <ScalarProperty Name="entityguid" ColumnName="entityguid" />
+          <ScalarProperty Name="rewardspoints" ColumnName="rewardspoints" />
+          <ScalarProperty Name="whatyoullget" ColumnName="whatyoullget" />
+          <ScalarProperty Name="outlineFileName" ColumnName="outlineFileName" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="overallscore" ColumnName="overallscore" />
+          <ScalarProperty Name="courserating" ColumnName="courserating" />
+          <ScalarProperty Name="ratingtotal" ColumnName="ratingtotal" />
+          <ScalarProperty Name="downloads" ColumnName="downloads" />
+          <ScalarProperty Name="recommendedAudience" ColumnName="recommendedAudience" />
+          <ScalarProperty Name="pageTitle" ColumnName="pageTitle" />
+          <ScalarProperty Name="metaTitle" ColumnName="metaTitle" />
+          <ScalarProperty Name="metaDescription" ColumnName="metaDescription" />
+          <ScalarProperty Name="isusd" ColumnName="isusd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creditterms">
+      <EntityTypeMapping TypeName="QuorseDbModel.creditterm">
+        <MappingFragment StoreEntitySet="creditterm">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreditTermStartDate" ColumnName="CreditTermStartDate" />
+          <ScalarProperty Name="CreditTermEndDate" ColumnName="CreditTermEndDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="QuorseDbModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="QuorseDbModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="QuorseDbModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="QuorseDbModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuorseDbModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="QuorseDbModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuorseDbModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QuorseDbModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QuorseDbModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,10 @@
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\Quorse.EntityFramework.dll.config
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\Quorse.EntityFramework.dll
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\Quorse.EntityFramework.pdb
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\EntityFramework.dll
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\EntityFramework.xml
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\obj\Debug\Quorse.EntityFramework.csprojResolveAssemblyReference.cache
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\obj\Debug\Quorse.EntityFramework.dll
+c:\users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.EntityFramework\obj\Debug\Quorse.EntityFramework.pdb

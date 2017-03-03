@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="QuorseDbEntities-Web.config Connection String" description="QuorseDbEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/EntityFramework.Schema.QuorseDbContext.csdl|res://*/EntityFramework.Schema.QuorseDbContext.ssdl|res://*/EntityFramework.Schema.QuorseDbContext.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:quorsedb.cloudapp.net,1433;Database=quorse_api;User ID=quorse;Password=Marketify!;initial catalog=quorse_api;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\yw\.lim\\documents\\visual\ studio\ 2015\\Projects\\Quorse\.AppApi\\Quorse\.AppApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QuorseDbEntities']/@connectionString" />
+  </parameter>
+  <parameter name="QuorseIdentityDb-Web.config Connection String" description="QuorseIdentityDb Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:quorsedb.cloudapp.net,1433;Database=QuorseIdentityDb;User ID=quorse;Password=Marketify!;Initial Catalog=QuorseIdentityDb;Integrated Security=false;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\yw\.lim\\documents\\visual\ studio\ 2015\\Projects\\Quorse\.AppApi\\Quorse\.AppApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QuorseIdentityDb']/@connectionString" />
+  </parameter>
+</parameters>

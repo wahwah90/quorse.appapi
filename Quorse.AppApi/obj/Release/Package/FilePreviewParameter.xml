@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="alpha-www-quorse" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\yw\.lim\\documents\\visual\ studio\ 2015\\Projects\\Quorse\.AppApi\\Quorse\.AppApi\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\yw\.lim\\documents\\visual\ studio\ 2015\\Projects\\Quorse\.AppApi\\Quorse\.AppApi\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="QuorseDbEntities-Web.config Connection String" description="" value="metadata=res://*/EntityFramework.Schema.QuorseDbContext.csdl|res://*/EntityFramework.Schema.QuorseDbContext.ssdl|res://*/EntityFramework.Schema.QuorseDbContext.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:quorsedb.cloudapp.net,1433;initial catalog=quorse_api;user id=quorse;password=Marketify!;application name=EntityFramework;MultipleActiveResultSets=True&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\yw\.lim\\documents\\visual\ studio\ 2015\\Projects\\Quorse\.AppApi\\Quorse\.AppApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QuorseDbEntities']/@connectionString" />
+  </parameter>
+  <parameter name="QuorseIdentityDb-Web.config Connection String" description="" value="Data Source=tcp:quorsedb.cloudapp.net,1433;Initial Catalog=QuorseIdentityDb;Integrated Security=False;User ID=quorse;Password=Marketify!;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\yw\.lim\\documents\\visual\ studio\ 2015\\Projects\\Quorse\.AppApi\\Quorse\.AppApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='QuorseIdentityDb']/@connectionString" />
+  </parameter>
+</parameters>

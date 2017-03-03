@@ -1,0 +1,16 @@
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Quorse.AppApi.DAL.dll.config
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Quorse.AppApi.DAL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Quorse.AppApi.DAL.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Quorse.EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Quorse.EntityFramework.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\EntityFramework.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\obj\Debug\Quorse.AppApi.DAL.csprojResolveAssemblyReference.cache
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\obj\Debug\Quorse.AppApi.DAL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\obj\Debug\Quorse.AppApi.DAL.pdb

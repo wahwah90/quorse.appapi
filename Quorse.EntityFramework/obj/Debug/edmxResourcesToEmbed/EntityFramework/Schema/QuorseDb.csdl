@@ -1,0 +1,1794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuorseDbEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="authorisedProvider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="backendlog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="itemid" Type="Int32" />
+    <Property Name="logtype" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="batchappStatu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="lastrun" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="billing">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="prefmethod" Type="Int32" />
+    <Property Name="billmethod" Type="Int32" />
+    <Property Name="address1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="postcode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="billemail1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="billemail2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="picmain" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="picsec" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bookingtyperef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="campaign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="startdate" Type="DateTime" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="createddate" Type="DateTime" Precision="3" />
+    <Property Name="updatedate" Type="DateTime" Precision="3" />
+    <Property Name="createdby" Type="Int32" />
+    <Property Name="tagline" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="thumbnail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="classcampaign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="campaignid" Type="Int32" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="order" Type="Int32" />
+  </EntityType>
+  <EntityType Name="classDate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Precision="7" />
+    <Property Name="starttime" Type="Time" Precision="7" />
+    <Property Name="endtime" Type="Time" Precision="7" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="roomid" Type="Int32" />
+    <Property Name="venueid" Type="Int32" />
+    <NavigationProperty Name="classDetail" Relationship="Self.FK_classDate_classDetails" FromRole="classDate" ToRole="classDetails" />
+  </EntityType>
+  <EntityType Name="classDetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="promoprice" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="seats" Type="Int32" />
+    <Property Name="classpromoitems" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isGrant" Type="Boolean" />
+    <Property Name="GrantScheme" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="7" />
+    <Property Name="HRDFScheme" Type="Int32" />
+    <Property Name="Scheme" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isshowninsearch" Type="Boolean" />
+    <Property Name="guaranteed" Type="Boolean" />
+    <Property Name="examfees" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="istimeticker" Type="Boolean" />
+    <Property Name="ttstartdate" Type="DateTime" Precision="3" />
+    <Property Name="ttenddate" Type="DateTime" Precision="3" />
+    <Property Name="ttprice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ttvenueid" Type="Int32" />
+    <Property Name="seatStatus" Type="Int32" />
+    <Property Name="ttvenueaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isexamfee" Type="Boolean" />
+    <Property Name="rewardsType" Type="Int32" />
+    <Property Name="customerAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="trainerAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="quorseAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="isClassCompleted" Type="Boolean" />
+    <Property Name="isSurveySent" Type="Boolean" />
+    <Property Name="completeDate" Type="DateTime" Precision="3" />
+    <Property Name="normalPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="promoPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ttPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="islunch" Type="Boolean" />
+    <Property Name="iscertificate" Type="Boolean" />
+    <Property Name="issbl" Type="Boolean" />
+    <Property Name="isexam" Type="Boolean" />
+    <Property Name="isbundle" Type="Boolean" />
+    <Property Name="istwelvemonths" Type="Boolean" />
+    <Property Name="isthirtydays" Type="Boolean" />
+    <Property Name="isoneeightzerodays" Type="Boolean" />
+    <Property Name="isusd" Type="Boolean" />
+    <Property Name="ninetydayaccess" Type="Boolean" />
+    <NavigationProperty Name="classDates" Relationship="Self.FK_classDate_classDetails" FromRole="classDetails" ToRole="classDate" />
+    <NavigationProperty Name="course" Relationship="Self.FK_classDetails_course" FromRole="classDetails" ToRole="course" />
+  </EntityType>
+  <EntityType Name="classDetails_history">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="promoprice" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="seats" Type="Int32" />
+    <Property Name="classpromoitems" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isGrant" Type="Boolean" />
+    <Property Name="GrantScheme" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="7" />
+    <Property Name="HRDFScheme" Type="Int32" />
+    <Property Name="Scheme" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isshowninsearch" Type="Boolean" />
+    <Property Name="guaranteed" Type="Boolean" />
+    <Property Name="examfees" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="istimeticker" Type="Boolean" />
+    <Property Name="ttstartdate" Type="DateTime" Precision="3" />
+    <Property Name="ttenddate" Type="DateTime" Precision="3" />
+    <Property Name="ttprice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ttvenueid" Type="Int32" />
+    <Property Name="seatStatus" Type="Int32" />
+    <Property Name="ttvenueaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isexamfee" Type="Boolean" />
+    <Property Name="rewardsType" Type="Int32" />
+    <Property Name="customerAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="trainerAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="quorseAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="isClassCompleted" Type="Boolean" />
+    <Property Name="isSurveySent" Type="Boolean" />
+    <Property Name="completeDate" Type="DateTime" Precision="3" />
+    <Property Name="normalPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="promoPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ttPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="islunch" Type="Boolean" />
+    <Property Name="iscertificate" Type="Boolean" />
+    <Property Name="issbl" Type="Boolean" />
+    <Property Name="isexam" Type="Boolean" />
+    <Property Name="isbundle" Type="Boolean" />
+    <Property Name="istwelvemonths" Type="Boolean" />
+    <Property Name="isthirtydays" Type="Boolean" />
+    <Property Name="isoneeightzerodays" Type="Boolean" />
+    <Property Name="isusd" Type="Boolean" />
+    <Property Name="ninetydayaccess" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="classParticipant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="ticketid" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="surveyKey" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isSurveyDone" Type="Boolean" />
+    <Property Name="surveyTime" Type="DateTime" Precision="3" />
+    <Property Name="type" Type="Int32" />
+  </EntityType>
+  <EntityType Name="classPromoCode">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="promoCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="promoCut" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="promoType" Type="Int32" />
+    <Property Name="classId" Type="Int32" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="endDate" Type="DateTime" Precision="3" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="usageLimit" Type="Int32" />
+  </EntityType>
+  <EntityType Name="classRebate">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="valueFrom" Type="Int32" />
+    <Property Name="valueTo" Type="Int32" />
+    <Property Name="rebate" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="classRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="classRevshare">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="valueFrom" Type="Int32" />
+    <Property Name="valueTo" Type="Int32" />
+    <Property Name="share" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="classRewardsAllocation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="rewardsPoint" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+    <Property Name="totalpaidprice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="rewardsfromprice" Type="Int32" />
+    <Property Name="totalrewards" Type="Int32" />
+  </EntityType>
+  <EntityType Name="classTrainer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ismain" Type="Boolean" />
+    <Property Name="coursetrainerid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="classVenue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="cost">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="Int32" Nullable="false" />
+    <Property Name="costItemid" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="unitprice" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="total" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="isgst" Type="Boolean" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="costItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="value" Type="Decimal" Precision="15" Scale="5" Nullable="false" />
+    <Property Name="isgst" Type="Boolean" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="costRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="costType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="course">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="creationdate" Type="DateTime" Precision="3" />
+    <Property Name="userdashid" Type="Int32" />
+    <Property Name="courseLevel1" Type="Int32" />
+    <Property Name="courseLevel2" Type="Int32" />
+    <Property Name="courseLevel3" Type="Int32" />
+    <Property Name="courseLevel4" Type="Int32" />
+    <Property Name="courseLevel5" Type="Int32" />
+    <Property Name="courseLevel6" Type="Int32" />
+    <Property Name="publishDate" Type="DateTime" Precision="3" />
+    <Property Name="expirationDate" Type="DateTime" Precision="3" />
+    <Property Name="code" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HRDFClaim" Type="Boolean" />
+    <Property Name="Duration" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="colorHex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="courseprice" Type="Decimal" Precision="11" Scale="4" />
+    <Property Name="showprice" Type="Boolean" />
+    <Property Name="teaser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="modules" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bgLarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CourseStatus" Type="Int32" />
+    <Property Name="updatedate" Type="DateTime" Precision="7" />
+    <Property Name="entityguid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rewardspoints" Type="Int32" />
+    <Property Name="whatyoullget" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="outlineFileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="availability" Type="Int32" />
+    <Property Name="overallscore" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="courserating" Type="Double" />
+    <Property Name="ratingtotal" Type="Int32" />
+    <Property Name="downloads" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="recommendedAudience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="isusd" Type="Boolean" />
+    <Property Name="lvcduration" Type="Decimal" Precision="20" Scale="4" />
+    <Property Name="elearningduration" Type="Decimal" Precision="35" Scale="4" />
+    <NavigationProperty Name="classDetails" Relationship="Self.FK_classDetails_course" FromRole="course" ToRole="classDetails" />
+  </EntityType>
+  <EntityType Name="course_old">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="creationdate" Type="DateTime" Precision="3" />
+    <Property Name="userdashid" Type="Int32" />
+    <Property Name="courseType" Type="Int32" />
+    <Property Name="coursePrincipal" Type="Int32" />
+    <Property Name="courseCategory" Type="Int32" />
+    <Property Name="courseProduct" Type="Int32" />
+    <Property Name="publishDate" Type="DateTime" Precision="3" />
+    <Property Name="expirationDate" Type="DateTime" Precision="3" />
+    <Property Name="code" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HRDFClaim" Type="Boolean" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="colorHex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="courseprice" Type="Decimal" Precision="11" Scale="4" />
+    <Property Name="showprice" Type="Boolean" />
+    <Property Name="teaser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="modules" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bgLarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CourseStatus" Type="Int32" />
+    <Property Name="updatedate" Type="DateTime" Precision="7" />
+    <Property Name="entityguid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rewardspoints" Type="Int32" />
+    <Property Name="whatyoullget" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="outlineFileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="availability" Type="Int32" />
+    <Property Name="overallscore" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="courserating" Type="Double" />
+    <Property Name="ratingtotal" Type="Int32" />
+    <Property Name="downloads" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="recommendedAudience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="courseAdditionalInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseId" Type="Int32" />
+    <Property Name="infoId" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseanalytic">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="usersource" Type="Int32" />
+    <Property Name="stamp" Type="DateTime" Precision="3" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="courseCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="typeid" Type="Int32" />
+    <Property Name="principalid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseFeatured">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="startdate" Type="DateTime" Precision="7" />
+    <Property Name="enddate" Type="DateTime" Precision="7" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="tag" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseFeaturedHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="coursefeaturedid" Type="Int32" />
+    <Property Name="position" Type="Int32" />
+    <Property Name="dateadded" Type="DateTime" Precision="3" />
+    <Property Name="dateremoved" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="courseFeaturedPosition">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="position" Type="Int32" />
+    <Property Name="coursefeaturedid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseInfoTypeRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="courseLevel1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="searchname" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="footerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="footerTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="courseLevel2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="level1Id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="searchname" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="footerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="footerTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="courseLevel3">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="level2Id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="searchname" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="footerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="footerTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="courseLevel4">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="level3Id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="searchname" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="footerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="footerTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="courseLevel5">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="level4Id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="footerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="footerTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="courseLevel6">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="level5Id" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="footerDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="footerTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="coursePrincipal">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="typeid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="typeid" Type="Int32" />
+    <Property Name="principalid" Type="Int32" />
+    <Property Name="categoryid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseStatusRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="courseTag">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="usage" Type="Int32" />
+    <Property Name="status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="courseTrainer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ismain" Type="Boolean" />
+    <Property Name="isSBLKhas" Type="Boolean" />
+    <Property Name="userlinkid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="courseType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="currency">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyRate" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="DashboardEnquiry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="EntityID" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="EnquiryDate" Type="DateTime" Precision="7" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="DashID" Type="Int32" />
+    <Property Name="TicketID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="defaultseo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastModified" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="docRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="enquiry">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullname" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="category" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="creationdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="dashid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="enquiryCategoryRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="enquiryHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="enquiryid" Type="Int32" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="statusfrom" Type="Int32" />
+    <Property Name="statusto" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="dashidFrom" Type="Int32" />
+    <Property Name="dashidTo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="enquiryStatusRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="enrollenquiry">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="bookingtype" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="createddate" Type="DateTime" Precision="3" />
+    <Property Name="updateddate" Type="DateTime" Precision="3" />
+    <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="phoneno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="paxno" Type="Int32" />
+    <Property Name="totalprice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="businessrefno" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="enrollenquiryHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="enrollenquiryid" Type="Int32" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="statusfrom" Type="Int32" />
+    <Property Name="statusto" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="dashidFrom" Type="Int32" />
+    <Property Name="dashidTo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="entity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="regno" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="foundingyear" Type="Int32" />
+    <Property Name="noemployees" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mobilephone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="officephone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="officephone2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="addressline1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="addressline2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="addresscity1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="addressstate1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="addresspostcode1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="permission" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="levelsapproval" Type="Int32" />
+    <Property Name="updatedate" Type="DateTime" Precision="7" />
+    <Property Name="iscreditterm" Type="Boolean" />
+    <Property Name="creditterm" Type="Int32" />
+    <Property Name="parententity" Type="Int32" />
+    <Property Name="providerprincipal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="providercourses" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ax1" Type="Int32" />
+    <Property Name="ax2" Type="Int32" />
+    <Property Name="ay1" Type="Int32" />
+    <Property Name="ay2" Type="Int32" />
+    <Property Name="profilebanner" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="pfx1" Type="Int32" />
+    <Property Name="pfx2" Type="Int32" />
+    <Property Name="pfy1" Type="Int32" />
+    <Property Name="pfy2" Type="Int32" />
+    <Property Name="presentationfile" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tmsid" Type="Int32" />
+    <Property Name="rewardsPoint" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="ShippingAddress1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingAddress2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingPostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingAddress1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BillingAddress2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BillingCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingPostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="creditTermLimit" Type="Decimal" Precision="11" Scale="4" />
+    <Property Name="awards" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="clienteles" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="testimonials" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="visionAndMission" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreditTermBalance" Type="Decimal" Precision="20" Scale="2" />
+  </EntityType>
+  <EntityType Name="entityTypeRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="exam">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="duration" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="noquestion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="exammode" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="questionformat" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="passingscoremin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="passingscoremax" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="testingcenter" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="retakefee" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="isusd" Type="Boolean" />
+    <Property Name="fee" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="grantProgram">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="hrdfClaim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="7" />
+    <Property Name="ProductOrderId" Type="Int64" />
+    <Property Name="TransactionFee" Type="Decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="logtypeRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductOrderId" Type="Int64" Nullable="false" />
+    <Property Name="TicketId" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="DiscountPrice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PromoCode" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="paymentRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PaymentTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderReferenceNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentType" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="ErrorDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AuthenticationCode" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentGateway" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Signature" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="AdditionalInformation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionFee" Type="Decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="pointsRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="value" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="startdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="enddate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isapproved" Type="Int32" Nullable="false" />
+    <Property Name="datemodified" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="privatebook">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="position" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="noofpax" Type="Int32" />
+    <Property Name="preferredvenue" Type="String" MaxLength="600" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="preferreddate1" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="preferreddate2" Type="DateTime" Precision="3" />
+    <Property Name="preferreddate3" Type="DateTime" Precision="3" />
+    <Property Name="preferredtrainer1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="preferredtrainer2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="preferredtrainer3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="scheme" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="istimeticker" Type="Boolean" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="createddate" Type="DateTime" Precision="3" />
+    <Property Name="updatedate" Type="DateTime" Precision="3" />
+    <Property Name="businessRefNo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="dashid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="privateBookHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="privatebookid" Type="Int32" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="statusfrom" Type="Int32" />
+    <Property Name="statusto" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="dashidFrom" Type="Int32" />
+    <Property Name="dashidTo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ProductOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReferenceNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="EntityId" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="CheckoutDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ContactName1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ContactEmail1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ContactBillingAddress1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ContactName2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPhone2" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ContactEmail2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PriceWithGst" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="ContactCompany1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="quotation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassId" Type="Int32" />
+    <Property Name="CourseId" Type="Int32" />
+    <Property Name="NoOfPax" Type="Int32" />
+    <Property Name="Upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EntityId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="RequestDate" Type="DateTime" Precision="3" />
+    <Property Name="UploadDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="QuotationNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TicketId" Type="Int32" />
+    <Property Name="isbundle" Type="Boolean" />
+    <Property Name="isPurchasedExam" Type="Boolean" />
+    <Property Name="UnitExamPrice" Type="Decimal" Precision="20" Scale="2" />
+  </EntityType>
+  <EntityType Name="rewardsTypeRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="room">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="venueid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="statusRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="subscription">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="subdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ticketdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="tickettype" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="filename" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phoneno" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="bookingtype" Type="Int32" />
+    <Property Name="ticketid" Type="Int32" />
+    <Property Name="IcNo" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="tickettype" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="filename" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phoneno" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="paxno" Type="Int32" />
+    <Property Name="totalprice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="bookingtype" Type="Int32" />
+    <Property Name="businessRefNo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isEnrolled" Type="Boolean" />
+    <Property Name="JoinExam" Type="Boolean" Nullable="false" />
+    <Property Name="classPromoCodeId" Type="Int32" />
+    <Property Name="EnrollType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ticketsHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ticketid" Type="Int32" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="statusfrom" Type="Int32" />
+    <Property Name="statusto" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="dashidFrom" Type="Int32" />
+    <Property Name="dashidTo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ticketstatu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ticketTypeRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="trainerEvaluation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="trainerId" Type="Int32" />
+    <Property Name="testimonials" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="evalQuestions" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="competency" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="communication" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="practical" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="engaging" Type="Decimal" Precision="1" Scale="1" />
+    <Property Name="creationdate" Type="DateTime" Precision="3" />
+    <Property Name="datemodified" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nric" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passport" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <Property Name="jobtitle" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="mobileno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phoneno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="langspoken" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="langwritten" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ax1" Type="Int32" />
+    <Property Name="ax2" Type="Int32" />
+    <Property Name="ay1" Type="Int32" />
+    <Property Name="ay2" Type="Int32" />
+    <Property Name="profilebanner" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="pfx1" Type="Int32" />
+    <Property Name="pfx2" Type="Int32" />
+    <Property Name="pfy1" Type="Int32" />
+    <Property Name="pfy2" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="creationdate" Type="DateTime" Precision="3" />
+    <Property Name="creationlocation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="creationip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="activationdate" Type="DateTime" Precision="3" />
+    <Property Name="activationkey" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="lastlogintime" Type="DateTime" Precision="3" />
+    <Property Name="updatetime" Type="DateTime" Precision="3" />
+    <Property Name="isSBLKhas" Type="Boolean" />
+    <Property Name="isSMETAP" Type="Boolean" />
+    <Property Name="isverified" Type="Boolean" />
+    <Property Name="quote" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isTTT" Type="Boolean" />
+    <Property Name="trainerloc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="yearsexp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="workingexp" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="industries" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="clienteles" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="certification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="awards" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="skills" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="qualifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="testimonials" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="jokingrate" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="usernameurl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="publication" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="trainertype" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="software" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="userrating" Type="Double" />
+    <Property Name="ratingtotal" Type="Int32" />
+    <Property Name="notrained" Type="Int32" />
+    <Property Name="noclass" Type="Int32" />
+    <Property Name="rewardsPoint" Type="Int32" />
+    <Property Name="ShippingAddress1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingAddress2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingPostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShippingCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingAddress1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BillingAddress2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BillingCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingPostCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BillingCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="downloads" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="useranalytic">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="usersource" Type="Int32" />
+    <Property Name="stamp" Type="DateTime" Precision="3" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userCourseEval">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="remarkstitle" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="remarksdesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="submitdate" Type="DateTime" Precision="3" />
+    <Property Name="content_overall" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_objectives" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_topics" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_organized" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_dedicated" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_summary" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_clarity" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="content_relevance" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="overallscore" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="useremail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="userphone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="userCourseReq">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="ticketid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="userDashboard">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="postitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="creationdate" Type="DateTime" Precision="7" />
+    <Property Name="creationlocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datemodified" Type="DateTime" Precision="7" />
+    <Property Name="phoneno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="userDashboardLink">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dashid" Type="Int32" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="userDashboardRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userDoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="Int32" Nullable="false" />
+    <Property Name="filename" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="location" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userFav">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="userlink">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userid" Type="Int32" Nullable="false" />
+    <Property Name="entityid" Type="Int32" Nullable="false" />
+    <Property Name="usertype" Type="Int32" Nullable="false" />
+    <Property Name="activationdate" Type="DateTime" Precision="3" />
+    <Property Name="activationkey" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="updatetime" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="userRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userStatusRef">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userTrainerEval">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="classid" Type="Int32" />
+    <Property Name="trainerid" Type="Int32" />
+    <Property Name="remarkstitle" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="remarksdesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="submitdate" Type="DateTime" Precision="3" />
+    <Property Name="trainer_summary" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="trainer_knowledge" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="trainer_ability" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="trainer_competent" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="trainer_communicate" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="trainer_practical" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="trainer_engaging" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="overallscore" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="useremail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="userphone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="venue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="address1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="latitude" Type="Decimal" Precision="13" Scale="10" />
+    <Property Name="longitude" Type="Decimal" Precision="13" Scale="10" />
+    <Property Name="entityid" Type="Int32" />
+    <Property Name="city" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="classDetails_bak">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="courseid" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="promoprice" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="seats" Type="Int32" />
+    <Property Name="classpromoitems" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isGrant" Type="Boolean" />
+    <Property Name="GrantScheme" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="7" />
+    <Property Name="HRDFScheme" Type="Int32" />
+    <Property Name="Scheme" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isshowninsearch" Type="Boolean" />
+    <Property Name="guaranteed" Type="Boolean" />
+    <Property Name="examfees" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="istimeticker" Type="Boolean" />
+    <Property Name="ttstartdate" Type="DateTime" Precision="3" />
+    <Property Name="ttenddate" Type="DateTime" Precision="3" />
+    <Property Name="ttprice" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ttvenueid" Type="Int32" />
+    <Property Name="seatStatus" Type="Int32" />
+    <Property Name="ttvenueaddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="isexamfee" Type="Boolean" />
+    <Property Name="rewardsType" Type="Int32" />
+    <Property Name="customerAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="trainerAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="quorseAlloc" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="isClassCompleted" Type="Boolean" />
+    <Property Name="isSurveySent" Type="Boolean" />
+    <Property Name="completeDate" Type="DateTime" Precision="3" />
+    <Property Name="normalPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="promoPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ttPriceGift" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="islunch" Type="Boolean" />
+    <Property Name="iscertificate" Type="Boolean" />
+    <Property Name="issbl" Type="Boolean" />
+    <Property Name="isexam" Type="Boolean" />
+    <Property Name="isbundle" Type="Boolean" />
+    <Property Name="istwelvemonths" Type="Boolean" />
+    <Property Name="isthirtydays" Type="Boolean" />
+    <Property Name="isoneeightzerodays" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="course1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="creationdate" Type="DateTime" Precision="3" />
+    <Property Name="userdashid" Type="Int32" />
+    <Property Name="courseLevel1" Type="Int32" />
+    <Property Name="courseLevel2" Type="Int32" />
+    <Property Name="courseLevel3" Type="Int32" />
+    <Property Name="courseLevel4" Type="Int32" />
+    <Property Name="courseLevel5" Type="Int32" />
+    <Property Name="courseLevel6" Type="Int32" />
+    <Property Name="publishDate" Type="DateTime" Precision="3" />
+    <Property Name="expirationDate" Type="DateTime" Precision="3" />
+    <Property Name="code" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HRDFClaim" Type="Boolean" />
+    <Property Name="Duration" Type="Decimal" Precision="20" Scale="3" />
+    <Property Name="language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="colorHex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="courseprice" Type="Decimal" Precision="11" Scale="4" />
+    <Property Name="showprice" Type="Boolean" />
+    <Property Name="teaser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="modules" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="thumbSmall" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbMedium" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thumbFeatured" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="bgLarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CourseStatus" Type="Int32" />
+    <Property Name="updatedate" Type="DateTime" Precision="7" />
+    <Property Name="entityguid" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rewardspoints" Type="Int32" />
+    <Property Name="whatyoullget" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="outlineFileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="availability" Type="Int32" />
+    <Property Name="overallscore" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="courserating" Type="Double" />
+    <Property Name="ratingtotal" Type="Int32" />
+    <Property Name="downloads" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="recommendedAudience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="pageTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaTitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="metaDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="isusd" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="creditterm">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreditTermStartDate" Type="DateTime" Precision="3" />
+    <Property Name="CreditTermEndDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="EntityId" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreditAmount" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="UpdateDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_classDate_classDetails">
+    <End Role="classDetails" Type="Self.classDetail" Multiplicity="0..1" />
+    <End Role="classDate" Type="Self.classDate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classDetails">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="classDate">
+        <PropertyRef Name="classid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_classDetails_course">
+    <End Role="course" Type="Self.course" Multiplicity="0..1" />
+    <End Role="classDetails" Type="Self.classDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="classDetails">
+        <PropertyRef Name="courseid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="quorsedbEntities34" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="authorisedProviders" EntityType="Self.authorisedProvider" />
+    <EntitySet Name="backendlogs" EntityType="Self.backendlog" />
+    <EntitySet Name="batchappStatus" EntityType="Self.batchappStatu" />
+    <EntitySet Name="billings" EntityType="Self.billing" />
+    <EntitySet Name="bookingtyperefs" EntityType="Self.bookingtyperef" />
+    <EntitySet Name="campaigns" EntityType="Self.campaign" />
+    <EntitySet Name="classcampaigns" EntityType="Self.classcampaign" />
+    <EntitySet Name="classDates" EntityType="Self.classDate" />
+    <EntitySet Name="classDetails" EntityType="Self.classDetail" />
+    <EntitySet Name="classDetails_history" EntityType="Self.classDetails_history" />
+    <EntitySet Name="classParticipants" EntityType="Self.classParticipant" />
+    <EntitySet Name="classPromoCodes" EntityType="Self.classPromoCode" />
+    <EntitySet Name="classRebates" EntityType="Self.classRebate" />
+    <EntitySet Name="classRefs" EntityType="Self.classRef" />
+    <EntitySet Name="classRevshares" EntityType="Self.classRevshare" />
+    <EntitySet Name="classRewardsAllocations" EntityType="Self.classRewardsAllocation" />
+    <EntitySet Name="classTrainers" EntityType="Self.classTrainer" />
+    <EntitySet Name="classVenues" EntityType="Self.classVenue" />
+    <EntitySet Name="costs" EntityType="Self.cost" />
+    <EntitySet Name="costItems" EntityType="Self.costItem" />
+    <EntitySet Name="costRefs" EntityType="Self.costRef" />
+    <EntitySet Name="costTypes" EntityType="Self.costType" />
+    <EntitySet Name="courses" EntityType="Self.course" />
+    <EntitySet Name="course_old" EntityType="Self.course_old" />
+    <EntitySet Name="courseAdditionalInfoes" EntityType="Self.courseAdditionalInfo" />
+    <EntitySet Name="courseanalytics" EntityType="Self.courseanalytic" />
+    <EntitySet Name="courseCategories" EntityType="Self.courseCategory" />
+    <EntitySet Name="courseFeatureds" EntityType="Self.courseFeatured" />
+    <EntitySet Name="courseFeaturedHistories" EntityType="Self.courseFeaturedHistory" />
+    <EntitySet Name="courseFeaturedPositions" EntityType="Self.courseFeaturedPosition" />
+    <EntitySet Name="courseInfoes" EntityType="Self.courseInfo" />
+    <EntitySet Name="courseInfoTypeRefs" EntityType="Self.courseInfoTypeRef" />
+    <EntitySet Name="courseLevel1" EntityType="Self.courseLevel1" />
+    <EntitySet Name="courseLevel2" EntityType="Self.courseLevel2" />
+    <EntitySet Name="courseLevel3" EntityType="Self.courseLevel3" />
+    <EntitySet Name="courseLevel4" EntityType="Self.courseLevel4" />
+    <EntitySet Name="courseLevel5" EntityType="Self.courseLevel5" />
+    <EntitySet Name="courseLevel6" EntityType="Self.courseLevel6" />
+    <EntitySet Name="coursePrincipals" EntityType="Self.coursePrincipal" />
+    <EntitySet Name="courseProducts" EntityType="Self.courseProduct" />
+    <EntitySet Name="courseStatusRefs" EntityType="Self.courseStatusRef" />
+    <EntitySet Name="courseTags" EntityType="Self.courseTag" />
+    <EntitySet Name="courseTrainers" EntityType="Self.courseTrainer" />
+    <EntitySet Name="courseTypes" EntityType="Self.courseType" />
+    <EntitySet Name="currencies" EntityType="Self.currency" />
+    <EntitySet Name="DashboardEnquiries" EntityType="Self.DashboardEnquiry" />
+    <EntitySet Name="defaultseos" EntityType="Self.defaultseo" />
+    <EntitySet Name="docRefs" EntityType="Self.docRef" />
+    <EntitySet Name="enquiries" EntityType="Self.enquiry" />
+    <EntitySet Name="enquiryCategoryRefs" EntityType="Self.enquiryCategoryRef" />
+    <EntitySet Name="enquiryHistories" EntityType="Self.enquiryHistory" />
+    <EntitySet Name="enquiryStatusRefs" EntityType="Self.enquiryStatusRef" />
+    <EntitySet Name="enrollenquiries" EntityType="Self.enrollenquiry" />
+    <EntitySet Name="enrollenquiryHistories" EntityType="Self.enrollenquiryHistory" />
+    <EntitySet Name="entities" EntityType="Self.entity" />
+    <EntitySet Name="entityTypeRefs" EntityType="Self.entityTypeRef" />
+    <EntitySet Name="exams" EntityType="Self.exam" />
+    <EntitySet Name="grantPrograms" EntityType="Self.grantProgram" />
+    <EntitySet Name="hrdfClaims" EntityType="Self.hrdfClaim" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+    <EntitySet Name="logtypeRefs" EntityType="Self.logtypeRef" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="paymentRefs" EntityType="Self.paymentRef" />
+    <EntitySet Name="PaymentTransactions" EntityType="Self.PaymentTransaction" />
+    <EntitySet Name="pointsRefs" EntityType="Self.pointsRef" />
+    <EntitySet Name="privatebooks" EntityType="Self.privatebook" />
+    <EntitySet Name="privateBookHistories" EntityType="Self.privateBookHistory" />
+    <EntitySet Name="ProductOrders" EntityType="Self.ProductOrder" />
+    <EntitySet Name="quotations" EntityType="Self.quotation" />
+    <EntitySet Name="rewardsTypeRefs" EntityType="Self.rewardsTypeRef" />
+    <EntitySet Name="rooms" EntityType="Self.room" />
+    <EntitySet Name="statusRefs" EntityType="Self.statusRef" />
+    <EntitySet Name="subscriptions" EntityType="Self.subscription" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="ticketdetails" EntityType="Self.ticketdetail" />
+    <EntitySet Name="tickets" EntityType="Self.ticket" />
+    <EntitySet Name="ticketsHistories" EntityType="Self.ticketsHistory" />
+    <EntitySet Name="ticketstatus" EntityType="Self.ticketstatu" />
+    <EntitySet Name="ticketTypeRefs" EntityType="Self.ticketTypeRef" />
+    <EntitySet Name="trainerEvaluations" EntityType="Self.trainerEvaluation" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="useranalytics" EntityType="Self.useranalytic" />
+    <EntitySet Name="userCourseEvals" EntityType="Self.userCourseEval" />
+    <EntitySet Name="userCourseReqs" EntityType="Self.userCourseReq" />
+    <EntitySet Name="userDashboards" EntityType="Self.userDashboard" />
+    <EntitySet Name="userDashboardLinks" EntityType="Self.userDashboardLink" />
+    <EntitySet Name="userDashboardRefs" EntityType="Self.userDashboardRef" />
+    <EntitySet Name="userDocs" EntityType="Self.userDoc" />
+    <EntitySet Name="userFavs" EntityType="Self.userFav" />
+    <EntitySet Name="userlinks" EntityType="Self.userlink" />
+    <EntitySet Name="userRefs" EntityType="Self.userRef" />
+    <EntitySet Name="userStatusRefs" EntityType="Self.userStatusRef" />
+    <EntitySet Name="userTrainerEvals" EntityType="Self.userTrainerEval" />
+    <EntitySet Name="venues" EntityType="Self.venue" />
+    <EntitySet Name="classDetails_bak" EntityType="Self.classDetails_bak" />
+    <EntitySet Name="course1" EntityType="Self.course1" />
+    <EntitySet Name="creditterms" EntityType="Self.creditterm" />
+    <AssociationSet Name="FK_classDate_classDetails" Association="Self.FK_classDate_classDetails">
+      <End Role="classDetails" EntitySet="classDetails" />
+      <End Role="classDate" EntitySet="classDates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_classDetails_course" Association="Self.FK_classDetails_course">
+      <End Role="course" EntitySet="courses" />
+      <End Role="classDetails" EntitySet="classDetails" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(QuorseDbEntities.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QuorseDbEntities.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

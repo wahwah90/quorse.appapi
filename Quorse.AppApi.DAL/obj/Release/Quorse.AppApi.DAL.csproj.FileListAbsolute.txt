@@ -1,0 +1,16 @@
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Quorse.AppApi.DAL.dll.config
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Quorse.AppApi.DAL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Quorse.AppApi.DAL.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Quorse.EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Quorse.EntityFramework.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\EntityFramework.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\obj\Release\Quorse.AppApi.DAL.csprojResolveAssemblyReference.cache
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\obj\Release\Quorse.AppApi.DAL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.DAL\obj\Release\Quorse.AppApi.DAL.pdb

@@ -1,0 +1,11 @@
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\Quorse.AppApi.BL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\Quorse.AppApi.BL.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\Quorse.AppApi.DAL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\Quorse.EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\EntityFramework.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\Quorse.AppApi.DAL.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\Quorse.EntityFramework.pdb
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\bin\Release\EntityFramework.xml
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\obj\Release\Quorse.AppApi.BL.csprojResolveAssemblyReference.cache
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\obj\Release\Quorse.AppApi.BL.dll
+C:\Users\yw.lim\documents\visual studio 2015\Projects\Quorse.AppApi\Quorse.AppApi.BL\obj\Release\Quorse.AppApi.BL.pdb

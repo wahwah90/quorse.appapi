@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD88DAA7-BD0D-4A06-8DA8-382555391112}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quorse.EntityFramework</RootNamespace>
+    <AssemblyName>Quorse.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityFramework\Schema\authorisedProvider.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\backendlog.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\batchappStatu.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\billing.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\bookingtyperef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\campaign.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classcampaign.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classDate.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classDetail.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classDetails_bak.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classDetails_history.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classParticipant.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classPromoCode.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classRebate.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classRevshare.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classRewardsAllocation.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classTrainer.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\classVenue.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\cost.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\costItem.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\costRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\costType.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\course.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\course1.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseAdditionalInfo.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseanalytic.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseCategory.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseFeatured.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseFeaturedHistory.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseFeaturedPosition.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseInfo.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseInfoTypeRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseLevel1.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseLevel2.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseLevel3.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseLevel4.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseLevel5.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseLevel6.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\coursePrincipal.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseProduct.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseStatusRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseTag.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseTrainer.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\courseType.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\course_old.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\creditterm.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\currency.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\DashboardEnquiry.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\defaultseo.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\docRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\enquiry.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\enquiryCategoryRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\enquiryHistory.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\enquiryStatusRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\enrollenquiry.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\enrollenquiryHistory.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\entity.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\entityTypeRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\exam.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\grantProgram.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\hrdfClaim.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\Invoice.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\logtypeRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\OrderDetail.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\paymentRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\PaymentTransaction.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\pointsRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\privatebook.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\privateBookHistory.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\ProductOrder.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\QuorseDbContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuorseDbContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\QuorseDbContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\QuorseDbContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuorseDbContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\quotation.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\rewardsTypeRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\room.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\sp_helpdiagrams_Result.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\statusRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\subscription.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\sysdiagram.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\ticket.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\ticketdetail.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\ticketsHistory.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\ticketstatu.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\ticketTypeRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\trainerEvaluation.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\user.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\useranalytic.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userCourseEval.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userCourseReq.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userDashboard.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userDashboardLink.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userDashboardRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userDoc.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userFav.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userlink.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userStatusRef.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\userTrainerEval.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\Schema\venue.cs">
+      <DependentUpon>QuorseDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ClassDetailTypeConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\RecommendedViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="EntityFramework\Schema\QuorseDbContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuorseDbContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityFramework\Schema\QuorseDbContext.edmx.diagram">
+      <DependentUpon>QuorseDbContext.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityFramework\Schema\QuorseDbContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuorseDbContext.edmx</DependentUpon>
+      <LastGenOutput>QuorseDbContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\Schema\QuorseDbContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuorseDbContext.edmx</DependentUpon>
+      <LastGenOutput>QuorseDbContext.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
